@@ -79,6 +79,15 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
 .hero-proof li{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.46);background:rgba(255,255,255,.1);color:#f8fafc;font-size:.88rem;font-weight:500}
 @media (max-width:780px){.nav-actions{order:2;margin-left:auto}.hamburger{display:block;order:3;margin-left:6px}.nav-links{position:absolute;right:4%;top:64px;width:min(92vw,260px);background:#fff;border:1px solid #d8dee6;border-radius:10px;padding:12px;display:none;flex-direction:column}.nav-links.show{display:flex}.brand-main{font-size:1rem}.brand-sub{font-size:.7rem}}
 @media (max-width:640px){.container{width:min(1140px,94%)}.hero{min-height:82vh;padding:90px 0 34px}.hero-content{width:min(900px,94%)}.hero h1{font-size:clamp(1.62rem,7.2vw,2.1rem)}.hero p{font-size:.96rem;margin-bottom:20px}.hero-actions{width:100%;display:grid;grid-template-columns:1fr;gap:10px}.hero-actions .btn{width:100%;justify-content:center}}
+.cookie-banner{position:fixed;left:14px;right:14px;bottom:14px;z-index:1200;background:#fff;border:1px solid #d9e1ea;border-radius:12px;box-shadow:0 16px 30px -22px rgba(15,23,42,.45);padding:12px 14px;display:none}
+.cookie-banner.show{display:block}
+.cookie-title{font-weight:700;color:#111827;font-size:.95rem}
+.cookie-desc{margin-top:2px;color:#475569;font-size:.86rem}
+.cookie-actions{margin-top:8px;display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.cookie-btn{border-radius:9px;padding:8px 11px;font-size:.82rem;font-weight:600;cursor:pointer}
+.cookie-btn.settings{border:1px solid #cbd5e1;background:#fff;color:#1f2937}
+.cookie-btn.accept{border:1px solid #1e3a5f;background:#1e3a5f;color:#fff}
+@media (max-width:640px){.cookie-banner{left:10px;right:10px;bottom:74px}.cookie-actions{justify-content:stretch}.cookie-btn{flex:1;text-align:center}}
   </style>
   <link rel="preload" href="./styles-deferred.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="./styles-deferred.css"></noscript>
@@ -535,6 +544,14 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       </div>
     </div>
   </div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="คุกกี้เว็บไซต์">
+    <p class="cookie-title">คุกกี้เพื่อประสบการณ์ที่ดีขึ้น</p>
+    <p class="cookie-desc">เราใช้คุกกี้เพื่อให้เว็บไซต์ทำงานได้ดีและวัดผลการใช้งานโดยรวม</p>
+    <div class="cookie-actions">
+      <button class="cookie-btn settings" id="cookieSettingsBtn" type="button">ตั้งค่า</button>
+      <button class="cookie-btn accept" id="cookieAcceptBtn" type="button">ยอมรับทั้งหมด</button>
+    </div>
+  </div>
 
   <script>
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -590,6 +607,21 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         setTheme(current === 'minimal' ? 'default' : 'minimal');
       });
     }
+    const cookieKey = 'nunnam-cookie-consent';
+    const cookieBanner = document.getElementById('cookieBanner');
+    const cookieSettingsBtn = document.getElementById('cookieSettingsBtn');
+    const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
+    if (cookieBanner && !localStorage.getItem(cookieKey)) {
+      cookieBanner.classList.add('show');
+    }
+    cookieSettingsBtn?.addEventListener('click', () => {
+      localStorage.setItem(cookieKey, 'custom');
+      cookieBanner?.classList.remove('show');
+    });
+    cookieAcceptBtn?.addEventListener('click', () => {
+      localStorage.setItem(cookieKey, 'all');
+      cookieBanner?.classList.remove('show');
+    });
 
     const promoDays = document.getElementById('promoDays');
     const promoHours = document.getElementById('promoHours');
