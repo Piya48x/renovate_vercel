@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>หนุนนำรับซ่อมบ้าน | รีโนเวทและงานช่างครบวงจร</title>
+  <title>รับซ่อมประปาแก้ไขท่อรั่ว | ซ่อมประปาทุกชนิด</title>
   <meta name="description" content="หนุนนำรับซ่อมบ้าน บริการรีโนเวทและงานช่างครบวงจร งานหลังคา ฝ้า ไฟฟ้า ประปา กระเบื้อง และก่อสร้าง โดยทีมช่างมืออาชีพ ประเมินฟรี">
   <meta name="keywords" content="รีโนเวทบ้าน, รับซ่อมบ้าน, งานหลังคา, ช่างไฟฟ้า, ช่างประปา, หนุนนำรับซ่อมบ้าน">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="หนุนนำรับซ่อมบ้าน | รีโนเวทและงานช่างครบวงจร">
+  <meta property="og:title" content="หนุนนำรับซ่อมบ้าน | รับซ่อมประปาแก้ไขท่อรั่ว ซ่อมประปาทุกชนิด">
   <meta property="og:description" content="ประเมินฟรี รับงานเล็ก-ใหญ่ งานมาตรฐานมืออาชีพ พร้อมดูแลหลังงานติดตั้ง">
   <meta property="og:image" content="./logo/n2.png?v=2">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,7 +21,10 @@
       "telephone": "+66-91-724-0308",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Bangkok",
+        "streetAddress": "คลองเก้า ซอย 9 63/407 ถนนคลอง9",
+        "addressLocality": "แขวงสามวาตะวันออก",
+        "addressRegion": "เขตคลองสามวา กรุงเทพมหานคร",
+        "postalCode": "10510",
         "addressCountry": "TH"
       },
       "sameAs": ["https://www.facebook.com/profile.php?id=61588531555394&rdid=vOcS8JLuhU95w42f#"],
@@ -79,15 +82,23 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
 .hero-proof li{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.46);background:rgba(255,255,255,.1);color:#f8fafc;font-size:.88rem;font-weight:500}
 @media (max-width:780px){.nav-actions{order:2;margin-left:auto}.hamburger{display:block;order:3;margin-left:6px}.nav-links{position:absolute;right:4%;top:64px;width:min(92vw,260px);background:#fff;border:1px solid #d8dee6;border-radius:10px;padding:12px;display:none;flex-direction:column}.nav-links.show{display:flex}.brand-main{font-size:1rem}.brand-sub{font-size:.7rem}}
 @media (max-width:640px){.container{width:min(1140px,94%)}.hero{min-height:82vh;padding:90px 0 34px}.hero-content{width:min(900px,94%)}.hero h1{font-size:clamp(1.62rem,7.2vw,2.1rem)}.hero p{font-size:.96rem;margin-bottom:20px}.hero-actions{width:100%;display:grid;grid-template-columns:1fr;gap:10px}.hero-actions .btn{width:100%;justify-content:center}}
-.cookie-banner{position:fixed;left:14px;right:14px;bottom:14px;z-index:1200;background:#fff;border:1px solid #d9e1ea;border-radius:12px;box-shadow:0 16px 30px -22px rgba(15,23,42,.45);padding:12px 14px;display:none}
+.cookie-banner{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:1200;width:min(920px,calc(100% - 24px));background:#fff;border:1px solid #d9e1ea;border-radius:14px;box-shadow:0 18px 40px -24px rgba(15,23,42,.52);padding:14px 16px;display:none}
 .cookie-banner.show{display:block}
-.cookie-title{font-weight:700;color:#111827;font-size:.95rem}
-.cookie-desc{margin-top:2px;color:#475569;font-size:.86rem}
-.cookie-actions{margin-top:8px;display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
-.cookie-btn{border-radius:9px;padding:8px 11px;font-size:.82rem;font-weight:600;cursor:pointer}
-.cookie-btn.settings{border:1px solid #cbd5e1;background:#fff;color:#1f2937}
-.cookie-btn.accept{border:1px solid #1e3a5f;background:#1e3a5f;color:#fff}
-@media (max-width:640px){.cookie-banner{left:10px;right:10px;bottom:74px}.cookie-actions{justify-content:stretch}.cookie-btn{flex:1;text-align:center}}
+.cookie-content{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:end}
+.cookie-text{min-width:0}
+.cookie-title{font-weight:700;color:#111827;font-size:1rem}
+.cookie-desc{margin-top:4px;color:#475569;font-size:.9rem;line-height:1.55}
+.cookie-policy{display:inline-flex;margin-top:6px;font-size:.85rem;color:#1e3a5f;text-decoration:underline;text-underline-offset:2px}
+.cookie-policy:hover{opacity:.88}
+.cookie-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.cookie-btn{border-radius:10px;padding:9px 13px;font-size:.84rem;font-weight:600;cursor:pointer;border:1px solid transparent;min-height:40px}
+.cookie-btn:focus-visible{outline:2px solid #1e3a5f;outline-offset:2px}
+.cookie-btn.reject{border-color:#cbd5e1;background:#fff;color:#1f2937}
+.cookie-btn.accept{border-color:#1e3a5f;background:#1e3a5f;color:#fff}
+@media (max-width:780px){.cookie-banner{bottom:76px;padding:12px}.cookie-content{grid-template-columns:1fr;align-items:stretch}.cookie-actions{justify-content:stretch}.cookie-btn{flex:1;text-align:center}}
+.contact-address{margin-top:12px;padding:10px 12px;background:#f8fafc;border:1px solid #dbe5f0;border-radius:10px}
+.contact-address-title{font-size:.84rem;font-weight:700;color:#1e3a5f;margin-bottom:4px}
+.contact-address-line{display:block;color:#334155;font-size:.9rem;line-height:1.5;font-style:normal}
   </style>
   <link rel="preload" href="./styles-deferred.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="./styles-deferred.css"></noscript>
@@ -109,7 +120,7 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
 
   <section id="home" class="hero">
     <div class="hero-content">
-      <p class="hero-badge"><i class="fa-solid fa-hammer"></i> รับงานกรุงเทพและปริมณฑล</p>
+      <p class="hero-badge"><i class="fa-solid fa-hammer"></i> รับงาน 5 จังหวัด: กรุงเทพฯ ปทุมธานี นนทบุรี นครปฐม สมุทรปราการ</p>
       <h1>รีโนเวทบ้านครบ จบในที่เดียว ไม่บานปลาย</h1>
       <p class="hero-intro">เคยโดนช่างเทงาน? งบบานปลาย? หนุนนำรับซ่อมบ้านทำสัญญาชัดเจนก่อนเริ่มงาน วางแผนงบและขั้นตอนโปร่งใส พร้อมส่งมอบงานตรงเวลา</p>
       <div class="hero-actions">
@@ -469,15 +480,23 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
             <a href="tel:0917240308"><i class="fa-solid fa-phone"></i> โทร: 091-724-0308</a>
             <a class="btn-line" href="https://line.me/ti/p/~0917240308" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> ทัก LINE ขอประเมินฟรี (ID: 0917240308)</a>
             <a class="btn-line" href="https://line.me/ti/p/~0917240308" target="_blank" rel="noopener"><i class="fa-solid fa-image"></i> ส่งรูปหน้างานเพื่อประเมินเร็ว</a>
-            <a class="btn-map" href="https://www.google.com/maps/place/%E0%B8%9B%E0%B8%97%E0%B8%B8%E0%B8%A1%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%B5/@14.0952062,99.9822679,9z/data=!3m1!4b1!4m6!3m5!1s0x311d808aa9fb8e47:0x1019237450c4850!8m2!3d14.0033913!4d100.6647101!16zL20vMDFfdzF2?entry=ttu&g_ep=EgoyMDI2MDIxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> เปิดแผนที่ Google Maps</a>
+            <a class="btn-map" href="https://www.google.com/maps?q=63%2F407%20%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%879%20%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%81%20%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B2%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AF%2010510" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i> เปิดแผนที่ Google Maps</a>
             <a class="btn-fb" href="https://www.facebook.com/profile.php?id=61588531555394&rdid=vOcS8JLuhU95w42f#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook Page</a>
           </div>
-          <div class="map-box"><iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=14.0033913,100.6647101&output=embed"></iframe></div>
+          <address class="contact-address" aria-label="ที่อยู่หนุนนำรับซ่อมบ้าน">
+            <p class="contact-address-title"><i class="fa-solid fa-location-dot"></i> ที่อยู่</p>
+            <span class="contact-address-line">คลองเก้า ซอย 9</span>
+            <span class="contact-address-line">63/407 ถนนคลอง9 แขวงสามวาตะวันออก</span>
+            <span class="contact-address-line">เขตคลองสามวา กรุงเทพฯ 10510</span>
+          </address>
+          <br>
+          <div class="map-box"><iframe loading="lazy" allowfullscreen src="https://www.google.com/maps?q=63%2F407%20%E0%B8%96%E0%B8%99%E0%B8%99%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%879%20%E0%B9%81%E0%B8%82%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B2%E0%B8%95%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%81%20%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B2%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AF%2010510&output=embed"></iframe></div>
         </div>
 
         <div class="contact-card reveal" data-anim="right">
           <h3 style="color:var(--primary); margin-bottom:8px;">ส่งข้อมูลให้ทีมงานติดต่อกลับ</h3>
-          <p style="color:var(--muted); margin-bottom:14px;">สำหรับประเมินราคาเบื้องต้นและนัดหมายเข้าตรวจหน้างาน (รับงานกรุงเทพและปริมณฑล)</p>
+          <p style="color:var(--muted); margin-bottom:8px;">สำหรับประเมินราคาเบื้องต้นและนัดหมายเข้าตรวจหน้างาน (รับงาน 5 จังหวัด)</p>
+          <p style="color:var(--muted); margin-bottom:14px;">1) กรุงเทพฯ 2) ปทุมธานี 3) นนทบุรี 4) นครปฐม 5) สมุทรปราการ</p>
           <div class="contact-form-layout">
             <form
               id="contactLeadForm"
@@ -544,12 +563,17 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       </div>
     </div>
   </div>
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="คุกกี้เว็บไซต์">
-    <p class="cookie-title">คุกกี้เพื่อประสบการณ์ที่ดีขึ้น</p>
-    <p class="cookie-desc">เราใช้คุกกี้เพื่อให้เว็บไซต์ทำงานได้ดีและวัดผลการใช้งานโดยรวม</p>
-    <div class="cookie-actions">
-      <button class="cookie-btn settings" id="cookieSettingsBtn" type="button">ตั้งค่า</button>
-      <button class="cookie-btn accept" id="cookieAcceptBtn" type="button">ยอมรับทั้งหมด</button>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-modal="true" aria-label="คุกกี้เว็บไซต์">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <p class="cookie-title">เราใช้คุกกี้เพื่อพัฒนาประสบการณ์ใช้งาน</p>
+        <p class="cookie-desc">เว็บไซต์ใช้คุกกี้ที่จำเป็นต่อการทำงาน และคุกกี้วิเคราะห์เพื่อปรับปรุงคุณภาพบริการ คุณสามารถเลือกยอมรับเฉพาะคุกกี้ที่จำเป็นได้</p>
+        <a class="cookie-policy" href="#contact">นโยบายความเป็นส่วนตัวและการใช้คุกกี้</a>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn reject" id="cookieRejectBtn" type="button">ยอมรับเฉพาะจำเป็น</button>
+        <button class="cookie-btn accept" id="cookieAcceptBtn" type="button">ยอมรับทั้งหมด</button>
+      </div>
     </div>
   </div>
 
@@ -609,13 +633,13 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
     }
     const cookieKey = 'nunnam-cookie-consent';
     const cookieBanner = document.getElementById('cookieBanner');
-    const cookieSettingsBtn = document.getElementById('cookieSettingsBtn');
+    const cookieRejectBtn = document.getElementById('cookieRejectBtn');
     const cookieAcceptBtn = document.getElementById('cookieAcceptBtn');
     if (cookieBanner && !localStorage.getItem(cookieKey)) {
       cookieBanner.classList.add('show');
     }
-    cookieSettingsBtn?.addEventListener('click', () => {
-      localStorage.setItem(cookieKey, 'custom');
+    cookieRejectBtn?.addEventListener('click', () => {
+      localStorage.setItem(cookieKey, 'necessary');
       cookieBanner?.classList.remove('show');
     });
     cookieAcceptBtn?.addEventListener('click', () => {
