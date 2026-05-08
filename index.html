@@ -46,7 +46,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Prompt:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Prompt:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=60" fetchpriority="high">
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
   <style>
@@ -126,6 +125,68 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
     </div>
   </header>
 
+  <div class="promo-entry-modal" id="promoEntryModal" aria-hidden="true">
+    <div class="promo-entry-dialog" role="dialog" aria-modal="true" aria-labelledby="promoEntryTitle">
+      <button class="promo-entry-close" id="promoEntryClose" type="button" aria-label="ปิดโปรโมชั่น"><i class="fa-solid fa-xmark"></i></button>
+      <div class="promo-entry-grid">
+        <div class="promo-entry-copy">
+          <p class="promo-entry-kicker"><i class="fa-solid fa-bolt"></i> โปรโมชั่นเปิดหน้าเว็บ</p>
+          <h2 class="promo-entry-title" id="promoEntryTitle">ลดค่าตรวจเช็คหน้างาน 33%</h2>
+          <p class="promo-entry-desc">
+            จากปกติ 1,500 บาท เหลือเพียง 1,000 บาท
+            สำหรับลูกค้าที่ต้องการให้ทีมเข้าตรวจเช็คหน้างานจริง เริ่ม
+            <span data-promo-date>วันนี้</span> เป็นต้นไป
+          </p>
+          <div class="promo-entry-price">
+            <small>1,500 บาท</small>
+            <strong>1,000 บาท</strong>
+            <em>ประหยัดทันที 500 บาท</em>
+          </div>
+          <ul class="promo-entry-list">
+            <li><i class="fa-solid fa-circle-check"></i><span>ประเมินจากรูปหน้างานเบื้องต้นฟรีก่อนนัดตรวจจริง</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>แจ้งขอบเขตงานและแนวทางแก้ไขชัดเจนก่อนเริ่ม</span></li>
+            <li><i class="fa-solid fa-circle-check"></i><span>เหมาะกับงานหลังคา รั่วซึม ต่อเติม ระบบไฟ ระบบประปา ฝ้าเพดาน และรีโนเวท</span></li>
+          </ul>
+          <div class="promo-entry-actions">
+            <a href="https://line.me/ti/p/~0917240308" class="btn btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> รับสิทธิ์ผ่าน LINE</a>
+            <a href="#booking" class="btn btn-ghost" data-close-promo><i class="fa-solid fa-calendar-check"></i> จองคิวตรวจเช็ค</a>
+          </div>
+        </div>
+        <div class="promo-entry-visual">
+          <div class="promo-entry-slides" id="promoEntrySlides" aria-label="ตัวอย่างผลงานเด่น 5 ประเภท">
+            <figure class="promo-entry-slide" data-title="งานฝ้าเพดานและรีโนเวท" data-alt="ตัวอย่างงานฝ้าเพดานและรีโนเวท">
+              <img src="/logo/aates/s01.png" alt="ตัวอย่างงานฝ้าเพดานและรีโนเวท">
+            </figure>
+            <figure class="promo-entry-slide active" data-title="งานรั่วซึมและหลังคา" data-alt="ตัวอย่างงานรั่วซึมและหลังคา">
+              <img src="/logo/aates/nu_014.jpg" alt="ตัวอย่างงานรั่วซึมและหลังคา">
+            </figure>
+            <figure class="promo-entry-slide" data-title="งานต่อเติมและโครงสร้าง" data-alt="ตัวอย่างงานต่อเติมและโครงสร้าง">
+              <img src="/logo/aates/nu_036.jpg" alt="ตัวอย่างงานต่อเติมและโครงสร้าง">
+            </figure>
+            <figure class="promo-entry-slide" data-title="งานระบบไฟฟ้า" data-alt="ตัวอย่างงานระบบไฟฟ้า">
+              <img src="/logo/aates/nu_077.jpg" alt="ตัวอย่างงานระบบไฟฟ้า">
+            </figure>
+            <figure class="promo-entry-slide" data-title="งานระบบประปา" data-alt="ตัวอย่างงานระบบประปา">
+              <img src="/logo/aates/S__6815810.jpg" alt="ตัวอย่างงานระบบประปา">
+            </figure>
+          </div>
+          <span class="promo-entry-stamp">โปรใหม่ เริ่มวันนี้</span>
+          <div class="promo-entry-slide-meta">
+            <strong id="promoEntrySlideTitle">งานรั่วซึมและหลังคา</strong>
+            <small id="promoEntrySlideCount">1 / 5</small>
+          </div>
+          <div class="promo-entry-dots" id="promoEntryDots" aria-label="ตัวอย่างผลงานหมุนอัตโนมัติ">
+            <button class="promo-entry-dot active" type="button" aria-label="ดูภาพ งานรั่วซึมและหลังคา"></button>
+            <button class="promo-entry-dot" type="button" aria-label="ดูภาพ งานต่อเติมและโครงสร้าง"></button>
+            <button class="promo-entry-dot" type="button" aria-label="ดูภาพ งานระบบไฟฟ้า"></button>
+            <button class="promo-entry-dot" type="button" aria-label="ดูภาพ งานระบบประปา"></button>
+            <button class="promo-entry-dot" type="button" aria-label="ดูภาพ งานฝ้าเพดานและรีโนเวท"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="home" class="hero">
     <div class="hero-content">
       <p class="hero-badge"><i class="fa-solid fa-hammer"></i> รับงาน 5 จังหวัด: กรุงเทพฯ ปทุมธานี นนทบุรี นครปฐม สมุทรปราการ</p>
@@ -135,7 +196,7 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         <a href="https://line.me/ti/p/~0917240308" class="btn btn-primary btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> ทัก LINE ขอประเมินฟรี</a>
         <a href="tel:0917240308" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> โทรเลย 091-724-0308</a>
       </div>
-      <p class="hero-offer-note">รับส่วนลด 15% หากอนุมัติงานภายในวันเสนอราคา</p>
+      <p class="hero-offer-note">โปรโมชั่นค่าตรวจเช็คหน้างาน 1,000 บาท จากปกติ 1,500 บาท เริ่ม <span data-promo-date>วันนี้</span></p>
       <ul class="hero-proof">
         <li><i class="fa-solid fa-circle-check"></i> 250+ งานสำเร็จ</li>
         <li><i class="fa-solid fa-circle-check"></i> ลูกค้าพึงพอใจ 98%</li>
@@ -156,38 +217,38 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       <a href="https://line.me/ti/p/~0917240308" class="btn btn-primary btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> ส่งรูปหน้างานทาง LINE</a>
     </div>
     <div class="conversion-strip reveal" data-anim="up">
-      <div><strong>คิวสำรวจหน้างานรอบนี้เปิดจำกัด</strong><p>ล็อกคิวล่วงหน้าได้ฟรี ไม่มีค่าใช้จ่ายก่อนเริ่มงาน</p></div>
-      <a href="#booking" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> จองคิวสำรวจฟรี</a>
+      <div><strong>คิวตรวจเช็คหน้างานรอบนี้เปิดรับจำนวนจำกัด</strong><p>โปรโมชั่นพิเศษ ลด 33% จาก 1,500 บาท เหลือเพียง 1,000 บาท</p></div>
+      <a href="#booking" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> จองคิวตรวจเช็ค 1,000 บาท</a>
     </div>
   </div>
 
   <section class="section promo-deal-section">
     <div class="container">
       <div class="promo-deal-wrap reveal" data-anim="up">
-        <div class="promo-bar" aria-label="โปรโมชั่นพิเศษ">
-          <strong>🔥 โปรโมชั่นพิเศษ ลด 15% ทุกงาน</strong>
-          <p>เฉพาะลูกค้าที่อนุมัติงานทันทีหลังเสนอราคา | หมดเขต 30 เมษายน 2569</p>
-          <div class="promo-timer" id="promoTimer" aria-live="polite">
-            <span class="promo-chip"><span id="promoDays">00</span>วัน</span>
-            <span class="promo-chip"><span id="promoHours">00</span>ชม.</span>
-            <span class="promo-chip"><span id="promoMinutes">00</span>นาที</span>
-            <span class="promo-chip"><span id="promoSeconds">00</span>วิ</span>
+        <div class="promo-bar" aria-label="ประกาศโปรโมชั่นค่าตรวจเช็คหน้างาน">
+          <strong>🔥 โปรโมชันพิเศษ ลดค่าตรวจเช็คหน้างาน 33%</strong>
+          <p>จากปกติ 1,500 บาท เหลือเพียง 1,000 บาท | เริ่ม <span data-promo-date>วันนี้</span> เป็นต้นไป</p>
+          <div class="promo-timer" aria-label="ข้อมูลโปรโมชั่น">
+            <span class="promo-chip">ลด 33%</span>
+            <span class="promo-chip">ปกติ 1,500</span>
+            <span class="promo-chip">เหลือ 1,000</span>
+            <span class="promo-chip">เริ่มวันนี้</span>
           </div>
         </div>
         <div class="promo-ribbon"><i class="fa-solid fa-bolt"></i> โปรโมชันแรงช่วงนี้</div>
-        <h2>โปรลดแรง 15% รีโนเวทคุ้มที่สุดในปีนี้</h2>
+        <h2>เช็กหน้างานจริง จ่ายน้อยลงทันที 500 บาท</h2>
         <ul class="promo-deal-list">
-          <li><i class="fa-solid fa-circle-check"></i> ลด 15% ทุกงาน ไม่มีขั้นต่ำ</li>
-          <li><i class="fa-solid fa-circle-check"></i> ใช้ได้กับงานหลังคา ต่อเติม ระบบไฟ ระบบประปา และรีโนเวททั้งหลัง</li>
-          <li><i class="fa-solid fa-circle-check"></i> ทำสัญญาชัดเจนก่อนเริ่มงาน</li>
+          <li><i class="fa-solid fa-circle-check"></i> ลดค่าตรวจเช็คหน้างานจาก 1,500 บาท เหลือเพียง 1,000 บาท</li>
+          <li><i class="fa-solid fa-circle-check"></i> ใช้ได้กับงานหลังคา รั่วซึม ต่อเติม ระบบไฟ ระบบประปา และรีโนเวททั่วไป</li>
+          <li><i class="fa-solid fa-circle-check"></i> ส่งรูปหน้างานให้ทีมประเมินเบื้องต้นฟรีก่อนนัดเข้าตรวจจริงได้</li>
         </ul>
         <div class="promo-deal-actions">
-          <a href="https://line.me/ti/p/~0917240308" class="btn btn-primary btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> รับสิทธิ์ส่วนลด 15% ตอนนี้</a>
+          <a href="https://line.me/ti/p/~0917240308" class="btn btn-primary btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> รับสิทธิ์โปร 1,000 บาท</a>
         </div>
         <div class="promo-urgency">
-          <p>โปรโมชั่นนี้จำกัดระยะเวลา</p>
-          <p>หลัง 30 เมษายน 2569 ราคาจะกลับสู่ปกติ</p>
-          <p>จองคิวล่วงหน้าได้ แต่ต้องยืนยันภายในช่วงโปรโมชั่น</p>
+          <p>โปรโมชั่นนี้สำหรับลูกค้าที่ต้องการให้ทีมเข้าตรวจเช็คหน้างานจริง</p>
+          <p>หากต้องการประเมินเบื้องต้น สามารถส่งรูปผ่าน LINE ให้ทีมดูฟรีก่อนได้</p>
+          <p>จองคิวเร็วขึ้น ช่วยให้วางแผนงาน งบ และขั้นตอนหน้างานได้ชัดเจนกว่าเดิม</p>
         </div>
       </div>
     </div>
@@ -328,12 +389,21 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         <div class="carousel-dots" id="portfolioDots" aria-label="ตัวเลือกภาพ"></div>
       </div>
       <div class="section-title reveal" data-anim="up" style="margin-top:34px;">
-        <h2>หมวดรูปภาพการทำงานทั้งหมด</h2>
-        <p>"ผลงานจริงจากประสบการณ์การทำงานที่ผ่านมา"</p>
+        <h2>หมวดรูปภาพการทำงาน แยกตามประเภทงาน</h2>
+        <p>เลือกดูผลงานจริงตามประเภทงาน เพื่อเทียบหน้างานได้ง่ายและเร็วขึ้น</p>
+      </div>
+      <div class="work-category-grid reveal" data-anim="up" id="workCategoryGrid"></div>
+      <div class="work-gallery-overview reveal" data-anim="up">
+        <div class="work-gallery-copy">
+          <span class="work-gallery-kicker" id="workGalleryKicker">กำลังแสดงผลงานทั้งหมด</span>
+          <h3 id="workGalleryTitle">ผลงานทุกประเภท</h3>
+          <p id="workGalleryDescription">รวมภาพหน้างานจริงทั้งหมดจากทีมช่าง พร้อมเลือกดูแยกตามประเภทงาน</p>
+        </div>
+        <div class="work-gallery-count" id="workGalleryCount">0 ภาพ</div>
       </div>
       <div class="gallery-grid work-gallery" id="workGallery"></div>
       <div class="gallery-more-wrap reveal" data-anim="up">
-        <button id="toggleWorkGallery" class="btn gallery-more-btn" type="button"><i class="fa-solid fa-images"></i> ดูเพิ่มเติมทั้งหมด</button>
+        <button id="toggleWorkGallery" class="btn gallery-more-btn" type="button"><i class="fa-solid fa-images"></i> ดูรูปเพิ่มในหมวดนี้</button>
       </div>
     </div>
   </section>
@@ -655,35 +725,104 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       cookieBanner?.classList.remove('show');
     });
 
-    const promoDays = document.getElementById('promoDays');
-    const promoHours = document.getElementById('promoHours');
-    const promoMinutes = document.getElementById('promoMinutes');
-    const promoSeconds = document.getElementById('promoSeconds');
-    const promoTimer = document.getElementById('promoTimer');
-    const promoDeadline = new Date('2026-04-30T23:59:59+07:00').getTime();
-    const pad2 = value => String(value).padStart(2, '0');
-    const updatePromoTimer = () => {
-      if (!promoDays || !promoHours || !promoMinutes || !promoSeconds || !promoTimer) return;
-      const now = Date.now();
-      const diff = promoDeadline - now;
-      if (diff <= 0) {
-        promoTimer.innerHTML = '<span class="promo-chip">โปรโมชั่นสิ้นสุดแล้ว</span>';
-        promoTimer.setAttribute('aria-label', 'โปรโมชั่นสิ้นสุดแล้ว');
-        return false;
+    const promoDateNodes = document.querySelectorAll('[data-promo-date]');
+    const promoToday = new Date();
+    const promoDateText = promoToday.toLocaleDateString('th-TH', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+    promoDateNodes.forEach(node => {
+      node.textContent = promoDateText;
+    });
+
+    const promoEntryModal = document.getElementById('promoEntryModal');
+    const promoEntryClose = document.getElementById('promoEntryClose');
+    const promoCloseTriggers = document.querySelectorAll('[data-close-promo]');
+    const promoEntryVisual = promoEntryModal?.querySelector('.promo-entry-visual') || null;
+    const promoEntrySlides = promoEntryModal
+      ? Array.from(promoEntryModal.querySelectorAll('.promo-entry-slide'))
+      : [];
+    const promoEntryDots = promoEntryModal
+      ? Array.from(promoEntryModal.querySelectorAll('.promo-entry-dot'))
+      : [];
+    const promoEntrySlideTitle = document.getElementById('promoEntrySlideTitle');
+    const promoEntrySlideCount = document.getElementById('promoEntrySlideCount');
+    let promoEntrySlideIndex = 0;
+    let promoEntrySlideTimer = null;
+    const setPromoEntrySlide = index => {
+      if (!promoEntrySlides.length) return;
+      promoEntrySlideIndex = (index + promoEntrySlides.length) % promoEntrySlides.length;
+      promoEntrySlides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('active', slideIndex === promoEntrySlideIndex);
+      });
+      promoEntryDots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === promoEntrySlideIndex);
+      });
+      const activeSlide = promoEntrySlides[promoEntrySlideIndex];
+      if (promoEntrySlideTitle) {
+        promoEntrySlideTitle.textContent =
+          activeSlide?.dataset.title || 'ภาพผลงานตัวอย่าง';
       }
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-      promoDays.textContent = pad2(days);
-      promoHours.textContent = pad2(hours);
-      promoMinutes.textContent = pad2(minutes);
-      promoSeconds.textContent = pad2(seconds);
-      return true;
+      if (promoEntrySlideCount) {
+        promoEntrySlideCount.textContent = `${promoEntrySlideIndex + 1} / ${promoEntrySlides.length}`;
+      }
     };
-    if (updatePromoTimer()) {
-      setInterval(updatePromoTimer, 1000);
+    const stopPromoEntryCarousel = () => {
+      if (!promoEntrySlideTimer) return;
+      clearInterval(promoEntrySlideTimer);
+      promoEntrySlideTimer = null;
+    };
+    const startPromoEntryCarousel = () => {
+      if (prefersReducedMotion || promoEntrySlides.length < 2) return;
+      stopPromoEntryCarousel();
+      promoEntrySlideTimer = window.setInterval(() => {
+        setPromoEntrySlide(promoEntrySlideIndex + 1);
+      }, 3000);
+    };
+    const setPromoModalState = open => {
+      if (!promoEntryModal) return;
+      promoEntryModal.classList.toggle('open', open);
+      promoEntryModal.setAttribute('aria-hidden', open ? 'false' : 'true');
+      document.body.classList.toggle('modal-open', open);
+      if (open) {
+        setPromoEntrySlide(promoEntrySlideIndex);
+        startPromoEntryCarousel();
+      } else {
+        stopPromoEntryCarousel();
+      }
+    };
+    setPromoEntrySlide(0);
+    if (promoEntryModal) {
+      window.addEventListener('load', () => {
+        window.setTimeout(() => setPromoModalState(true), prefersReducedMotion ? 0 : 360);
+      });
+      promoEntryModal.addEventListener('click', event => {
+        if (event.target === promoEntryModal) setPromoModalState(false);
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && promoEntryModal.classList.contains('open')) {
+          setPromoModalState(false);
+        }
+      });
+    }
+    if (promoEntryClose) {
+      promoEntryClose.addEventListener('click', () => setPromoModalState(false));
+    }
+    promoCloseTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => setPromoModalState(false));
+    });
+    promoEntryDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        setPromoEntrySlide(index);
+        startPromoEntryCarousel();
+      });
+    });
+    if (promoEntryVisual && !prefersReducedMotion) {
+      promoEntryVisual.addEventListener('mouseenter', stopPromoEntryCarousel);
+      promoEntryVisual.addEventListener('mouseleave', () => {
+        if (promoEntryModal?.classList.contains('open')) startPromoEntryCarousel();
+      });
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -988,6 +1127,11 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       });
     }
     const workGallery = document.getElementById('workGallery');
+    const workCategoryGrid = document.getElementById('workCategoryGrid');
+    const workGalleryKicker = document.getElementById('workGalleryKicker');
+    const workGalleryTitle = document.getElementById('workGalleryTitle');
+    const workGalleryDescription = document.getElementById('workGalleryDescription');
+    const workGalleryCount = document.getElementById('workGalleryCount');
     const toggleWorkGalleryBtn = document.getElementById('toggleWorkGallery');
     const workGalleryLightbox = document.getElementById('workGalleryLightbox');
     const workGalleryLightboxImage = document.getElementById('workGalleryLightboxImage');
@@ -1020,51 +1164,160 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         }
       });
     }
-    if (workGallery && toggleWorkGalleryBtn) {
-      const totalWorkImages = 95;
+    if (workGallery && toggleWorkGalleryBtn && workCategoryGrid) {
       const visibleByDefault = 8;
       let galleryReadyToAnimate = prefersReducedMotion;
-      let hasRenderedAllImages = false;
-      const galleryPathByExt = (number, ext) => `/logo/aates/nu_${number}.${ext}`;
-      const imageIds = Array.from({ length: totalWorkImages }, (_, i) => String(i + 1).padStart(3, '0'));
-      const createWorkCard = (imageId, index) => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-        const img = document.createElement('img');
-        img.loading = 'lazy';
-        img.decoding = 'async';
-        if (index < 2) img.fetchPriority = 'high';
-        img.dataset.imageId = imageId;
-        img.dataset.fallbackStep = '0';
-        img.src = galleryPathByExt(imageId, 'avif');
-        img.alt = `ภาพการทำงาน ${index + 1}`;
-        img.addEventListener('error', () => {
-          const imageId = img.dataset.imageId;
-          const nextStep = Number(img.dataset.fallbackStep || 0);
-          const fallbackExts = ['webp', 'jpg'];
-          if (imageId && nextStep < fallbackExts.length) {
-            img.dataset.fallbackStep = String(nextStep + 1);
-            img.src = galleryPathByExt(imageId, fallbackExts[nextStep]);
-            return;
-          }
-          item.remove();
-          refreshGalleryState();
+      let selectedCategoryId = 'all';
+      let isGalleryExpanded = false;
+
+      const range = (start, end) =>
+        Array.from({ length: end - start + 1 }, (_, index) => start + index);
+      const makeNuItems = numbers =>
+        numbers.map(number => {
+          const imageId = String(number).padStart(3, '0');
+          return {
+            key: `nu_${imageId}`,
+            src: `/logo/aates/nu_${imageId}.jpg`,
+          };
         });
-        const label = document.createElement('span');
-        label.textContent = `งานจริง #${index + 1}`;
-        item.appendChild(img);
-        item.appendChild(label);
-        return item;
-      };
-      const appendWorkCards = (start, end) => {
-        const fragment = document.createDocumentFragment();
-        for (let i = start; i < end; i += 1) {
-          fragment.appendChild(createWorkCard(imageIds[i], i));
-        }
-        workGallery.appendChild(fragment);
-      };
+      const makeSItems = numbers =>
+        numbers.map(number => ({
+          key: `S__${number}`,
+          src: `/logo/aates/S__${number}.jpg`,
+        }));
+
+      const workCategories = [
+        {
+          id: 'all',
+          icon: 'fa-solid fa-images',
+          title: 'ผลงานทุกประเภท',
+          shortTitle: 'รวมทั้งหมด',
+          description:
+            'รวมภาพหน้างานจริงทั้งหมดจากทีมช่าง พร้อมเลือกดูแยกตามประเภทงานที่สนใจได้ทันที',
+          cover: '/logo/be-af/f_full.webp',
+          items: [],
+        },
+        {
+          id: 'roof',
+          icon: 'fa-solid fa-house-chimney',
+          title: 'งานหลังคาและมุงหลังคา',
+          shortTitle: 'งานหลังคา',
+          description:
+            'งานเปลี่ยนหลังคา ซ่อมรั่ว มุงเมทัลชีท และเก็บรอยต่อให้ใช้งานได้เต็มประสิทธิภาพ',
+          cover: '/logo/aates/nu_073.jpg',
+          items: [
+            ...makeNuItems([7, 10]),
+            ...makeNuItems(range(13, 22)),
+            ...makeNuItems([63, 64]),
+            ...makeNuItems(range(66, 75)),
+            ...makeNuItems(range(80, 83)),
+          ],
+        },
+        {
+          id: 'steel',
+          icon: 'fa-solid fa-ruler-combined',
+          title: 'งานต่อเติมโครงเหล็กและกันสาด',
+          shortTitle: 'โครงเหล็ก/กันสาด',
+          description:
+            'งานกันสาด ทางเดิน โครงเหล็ก ต่อเติมโรงจอด และงานภายนอกที่ต้องเน้นความแข็งแรงเป็นพิเศษ',
+          cover: '/logo/aates/nu_055.jpg',
+          items: [
+            ...makeNuItems([6, 8, 9, 11, 12]),
+            ...makeNuItems(range(27, 62)),
+            ...makeNuItems([65]),
+          ],
+        },
+        {
+          id: 'ceiling',
+          icon: 'fa-solid fa-border-all',
+          title: 'งานฝ้าเพดานและเก็บผิว',
+          shortTitle: 'ฝ้าเพดาน',
+          description:
+            'งานติดตั้งฝ้า ซ่อมฝ้า เก็บรอยต่อ ฉาบเรียบ และเก็บผิวภายในให้พร้อมใช้งานจริง',
+          cover: '/logo/aates/S__6815750.jpg',
+          items: [
+            ...makeNuItems([2, 4, 5]),
+            ...makeNuItems(range(23, 26)),
+            ...makeSItems([
+              6815748, 6815749, 6815750, 6815751, 6815752, 6815753, 6815754,
+              6815755, 6815756, 6815757, 6815758, 6815760, 6815761, 6815762,
+              6815763, 6815764, 6815765, 6815814, 6815815, 6815816, 6815817,
+              6815819, 6815820, 6815821, 6815822, 6815824, 6815825, 6815826,
+              6815828, 6815829, 6815830, 6815831, 6815832, 6815833,
+            ]),
+          ],
+        },
+        {
+          id: 'electrical',
+          icon: 'fa-solid fa-bolt',
+          title: 'งานไฟฟ้าและตู้ควบคุม',
+          shortTitle: 'งานไฟฟ้า',
+          description:
+            'ตรวจเช็กตู้ไฟ เดินระบบ แก้ปัญหาไฟฟ้าภายใน และติดตั้งอุปกรณ์ให้ใช้งานปลอดภัยมากขึ้น',
+          cover: '/logo/aates/nu_077.jpg',
+          items: [...makeNuItems(range(76, 79))],
+        },
+        {
+          id: 'plumbing',
+          icon: 'fa-solid fa-faucet-drip',
+          title: 'งานประปาและสุขภัณฑ์',
+          shortTitle: 'งานประปา',
+          description:
+            'งานเดินท่อ ซ่อมรอยรั่ว ปรับระบบน้ำ ติดตั้งปั๊ม ถังเก็บน้ำ และงานห้องน้ำหรือครัว',
+          cover: '/logo/aates/S__6815772.jpg',
+          items: [
+            ...makeNuItems(range(84, 86)),
+            ...makeSItems([
+              6815767, 6815768, 6815769, 6815770, 6815771, 6815772, 6815773,
+              6815774, 6815775, 6815776, 6815781, 6815782, 6815783, 6815785,
+              6815786, 6815787, 6815788, 6815790, 6815791, 6815792, 6815793,
+              6815795, 6815796, 6815797, 6815807, 6815808, 6815809, 6815810,
+              6815811, 6815812,
+            ]),
+          ],
+        },
+        {
+          id: 'tile',
+          icon: 'fa-solid fa-table-cells-large',
+          title: 'งานพื้น กระเบื้อง และสระ',
+          shortTitle: 'พื้น/กระเบื้อง',
+          description:
+            'งานปูกระเบื้อง สระว่ายน้ำ พื้นลายไม้ และงานพื้นใช้งานจริงที่ต้องการผิวงานเรียบร้อยสวยงาม',
+          cover: '/logo/aates/nu_089.jpg',
+          items: [...makeNuItems(range(87, 91)), ...makeNuItems(range(94, 95))],
+        },
+        {
+          id: 'masonry',
+          icon: 'fa-solid fa-trowel-bricks',
+          title: 'งานก่อฉาบ รั้ว และเก็บโครงสร้าง',
+          shortTitle: 'ก่อฉาบ/รั้ว',
+          description:
+            'งานก่อผนัง ฉาบเก็บรั้ว และงานซ่อมโครงสร้างย่อยเพื่อเตรียมพื้นที่ให้พร้อมก่อนใช้งาน',
+          cover: '/logo/aates/nu_093.jpg',
+          items: [...makeNuItems(range(92, 93)), ...makeSItems([6815799, 6815800])],
+        },
+      ];
+
+      workCategories.slice(1).forEach(category => {
+        category.items = category.items.map(item => ({
+          ...item,
+          categoryId: category.id,
+        }));
+      });
+      workCategories[0].items = workCategories
+        .slice(1)
+        .flatMap(category => category.items);
+
+      const categoryById = Object.fromEntries(
+        workCategories.map(category => [category.id, category]),
+      );
+      const getCurrentCategory = () =>
+        categoryById[selectedCategoryId] || workCategories[0];
+
       const animateWorkGalleryItems = () => {
-        const visibleCards = Array.from(workGallery.children).filter(card => !card.classList.contains('is-extra'));
+        const visibleCards = Array.from(workGallery.children).filter(
+          card => !card.classList.contains('is-extra'),
+        );
         visibleCards.forEach(card => {
           card.classList.remove('is-visible');
           card.style.removeProperty('--item-delay');
@@ -1080,28 +1333,130 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
           });
         });
       };
-      const refreshGalleryState = () => {
-        const cards = Array.from(workGallery.children);
-        cards.forEach((card, index) => {
-          card.classList.toggle('is-extra', !workGallery.classList.contains('expanded') && index >= visibleByDefault);
-          const label = card.querySelector('span');
-          if (label) label.textContent = `งานจริง #${index + 1}`;
+
+      const createCategoryCard = category => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'work-category-card';
+        if (category.id === selectedCategoryId) button.classList.add('active');
+        button.dataset.category = category.id;
+        button.setAttribute('aria-label', `ดูหมวด ${category.title} จำนวน ${category.items.length} ภาพ`);
+        button.setAttribute('aria-pressed', category.id === selectedCategoryId ? 'true' : 'false');
+        button.innerHTML = `
+          <img src="${category.cover}" alt="${category.title}" loading="lazy" decoding="async">
+          <div class="work-category-card__content">
+            <span class="work-category-card__icon"><i class="${category.icon}"></i></span>
+            <strong>${category.shortTitle}</strong>
+            <small>${category.items.length} ภาพ</small>
+          </div>
+        `;
+        return button;
+      };
+
+      const renderCategoryCards = () => {
+        const fragment = document.createDocumentFragment();
+        workCategories.forEach(category => {
+          fragment.appendChild(createCategoryCard(category));
         });
-        const canExpand = hasRenderedAllImages
-          ? cards.length > visibleByDefault
-          : imageIds.length > visibleByDefault;
+        workCategoryGrid.replaceChildren(fragment);
+      };
+
+      const updateGalleryOverview = category => {
+        if (workGalleryKicker) {
+          workGalleryKicker.textContent =
+            category.id === 'all'
+              ? 'กำลังแสดงผลงานทั้งหมด'
+              : `กำลังแสดงหมวด ${category.shortTitle}`;
+        }
+        if (workGalleryTitle) workGalleryTitle.textContent = category.title;
+        if (workGalleryDescription) workGalleryDescription.textContent = category.description;
+        if (workGalleryCount) workGalleryCount.textContent = `${category.items.length} ภาพ`;
+      };
+
+      const createWorkCard = (item, index, category) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'gallery-item';
+        if (!isGalleryExpanded && index >= visibleByDefault) {
+          card.classList.add('is-extra');
+        }
+        const labelText =
+          selectedCategoryId === 'all'
+            ? category.shortTitle
+            : `${category.shortTitle} #${index + 1}`;
+        const titleText = `${category.title} ภาพที่ ${index + 1}`;
+
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        if (index < 2) img.fetchPriority = 'high';
+        img.src = item.src;
+        img.alt = titleText;
+
+        const label = document.createElement('span');
+        label.textContent = labelText;
+
+        card.dataset.src = item.src;
+        card.dataset.title = titleText;
+        card.dataset.alt = titleText;
+        card.append(img, label);
+        return card;
+      };
+
+      const renderWorkGallery = () => {
+        const category = getCurrentCategory();
+        updateGalleryOverview(category);
+        workGallery.classList.toggle('expanded', isGalleryExpanded);
+
+        if (!category.items.length) {
+          workGallery.innerHTML = `
+            <div class="gallery-item gallery-placeholder">
+              <div>
+                <i class="fa-regular fa-image"></i>
+                <p>ยังไม่มีรูปในหมวดนี้</p>
+              </div>
+            </div>
+          `;
+          toggleWorkGalleryBtn.style.display = 'none';
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        category.items.forEach((item, index) => {
+          const itemCategory = categoryById[item.categoryId] || category;
+          fragment.appendChild(createWorkCard(item, index, itemCategory));
+        });
+        workGallery.replaceChildren(fragment);
+
+        const canExpand = category.items.length > visibleByDefault;
         toggleWorkGalleryBtn.style.display = canExpand ? 'inline-flex' : 'none';
+        toggleWorkGalleryBtn.innerHTML = isGalleryExpanded
+          ? '<i class="fa-solid fa-chevron-up"></i> ซ่อนรูปในหมวดนี้'
+          : '<i class="fa-solid fa-images"></i> ดูรูปเพิ่มในหมวดนี้';
+
         if (galleryReadyToAnimate) animateWorkGalleryItems();
       };
-      appendWorkCards(0, Math.min(visibleByDefault, imageIds.length));
-      workGallery.addEventListener('click', e => {
-        const card = e.target.closest('.gallery-item');
-        if (!card || !workGallery.contains(card)) return;
-        const image = card.querySelector('img');
-        const label = card.querySelector('span');
-        if (!image?.src) return;
-        openWorkLightbox(image.src, label?.textContent?.trim(), image.alt);
+
+      const selectCategory = categoryId => {
+        if (!categoryById[categoryId]) return;
+        selectedCategoryId = categoryId;
+        isGalleryExpanded = false;
+        renderCategoryCards();
+        renderWorkGallery();
+      };
+
+      workCategoryGrid.addEventListener('click', event => {
+        const target = event.target.closest('[data-category]');
+        if (!target) return;
+        selectCategory(target.dataset.category || 'all');
       });
+
+      workGallery.addEventListener('click', event => {
+        const card = event.target.closest('.gallery-item');
+        if (!card || !workGallery.contains(card)) return;
+        openWorkLightbox(card.dataset.src || '', card.dataset.title || '', card.dataset.alt || '');
+      });
+
       if (!prefersReducedMotion && 'IntersectionObserver' in window) {
         const workGalleryObserver = new IntersectionObserver((entries, observer) => {
           if (entries.some(entry => entry.isIntersecting)) {
@@ -1114,18 +1469,14 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       } else {
         galleryReadyToAnimate = true;
       }
+
       toggleWorkGalleryBtn.addEventListener('click', () => {
-        const expanded = workGallery.classList.toggle('expanded');
-        if (expanded && !hasRenderedAllImages) {
-          appendWorkCards(visibleByDefault, imageIds.length);
-          hasRenderedAllImages = true;
-        }
-        toggleWorkGalleryBtn.innerHTML = expanded
-          ? '<i class="fa-solid fa-chevron-up"></i> ซ่อนรูปเพิ่มเติม'
-          : '<i class="fa-solid fa-images"></i> ดูเพิ่มเติมทั้งหมด';
-        refreshGalleryState();
+        isGalleryExpanded = !isGalleryExpanded;
+        renderWorkGallery();
       });
-      refreshGalleryState();
+
+      renderCategoryCards();
+      renderWorkGallery();
     }
 
     const portfolioTrack = document.getElementById('portfolioCarouselTrack');
