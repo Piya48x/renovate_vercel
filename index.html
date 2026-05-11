@@ -132,7 +132,12 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         <div class="promo-entry-copy">
           <p class="promo-entry-kicker"><i class="fa-solid fa-bolt"></i> โปรโมชั่นเปิดหน้าเว็บ</p>
           <h2 class="promo-entry-title" id="promoEntryTitle">ลดค่าตรวจเช็คหน้างาน 33%</h2>
-          <p class="promo-entry-desc">
+          <p class="promo-entry-desc promo-entry-desc--desktop">
+            จากปกติ 1,500 บาท เหลือเพียง 1,000 บาท
+            สำหรับลูกค้าที่ต้องการให้ทีมเข้าตรวจเช็คหน้างานจริง เริ่ม
+            <span data-promo-date>วันนี้</span> เป็นต้นไป
+          </p>
+          <p class="promo-entry-desc promo-entry-desc--mobile">
             จากปกติ 1,500 บาท เหลือเพียง 1,000 บาท
             สำหรับลูกค้าที่ต้องการให้ทีมเข้าตรวจเช็คหน้างานจริง เริ่ม
             <span data-promo-date>วันนี้</span> เป็นต้นไป
@@ -147,9 +152,10 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
             <li><i class="fa-solid fa-circle-check"></i><span>แจ้งขอบเขตงานและแนวทางแก้ไขชัดเจนก่อนเริ่ม</span></li>
             <li><i class="fa-solid fa-circle-check"></i><span>เหมาะกับงานหลังคา รั่วซึม ต่อเติม ระบบไฟ ระบบประปา ฝ้าเพดาน และรีโนเวท</span></li>
           </ul>
+          <p class="promo-entry-mobile-note">เหมาะกับงานหลังคา รั่วซึม ต่อเติม ระบบไฟ ระบบประปา ฝ้าเพดาน และรีโนเวท</p>
           <div class="promo-entry-actions">
-            <a href="https://line.me/ti/p/~0917240308" class="btn btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i> รับสิทธิ์ผ่าน LINE</a>
-            <a href="#booking" class="btn btn-ghost" data-close-promo><i class="fa-solid fa-calendar-check"></i> จองคิวตรวจเช็ค</a>
+            <a href="https://line.me/ti/p/~0917240308" class="btn btn-line" target="_blank" rel="noopener"><i class="fa-brands fa-line"></i><span class="promo-entry-btn-text promo-entry-btn-text--desktop">รับสิทธิ์ผ่าน LINE</span><span class="promo-entry-btn-text promo-entry-btn-text--mobile">รับสิทธิ์ LINE</span></a>
+            <a href="#booking" class="btn btn-ghost" data-close-promo><i class="fa-solid fa-calendar-check"></i><span class="promo-entry-btn-text promo-entry-btn-text--desktop">จองคิวตรวจเช็ค</span><span class="promo-entry-btn-text promo-entry-btn-text--mobile">จองคิว</span></a>
           </div>
         </div>
         <div class="promo-entry-visual">
@@ -392,6 +398,20 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         <h2>หมวดรูปภาพการทำงาน แยกตามประเภทงาน</h2>
         <p>เลือกดูผลงานจริงตามประเภทงาน เพื่อเทียบหน้างานได้ง่ายและเร็วขึ้น</p>
       </div>
+      <div class="work-category-mobile-bar reveal" data-anim="up">
+        <button class="work-category-mobile-trigger" id="openWorkCategorySheet" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="workCategorySheet">
+          <span class="work-category-mobile-trigger__icon" id="workCategoryMobileIcon"><i class="fa-solid fa-images"></i></span>
+          <span class="work-category-mobile-trigger__copy">
+            <span class="work-category-mobile-trigger__label" id="workCategoryMobileLabel">เลือกหมวดภาพ</span>
+            <strong id="workCategoryMobileTitle">ผลงานทุกประเภท</strong>
+            <small id="workCategoryMobileCount">0 ภาพ</small>
+          </span>
+          <span class="work-category-mobile-trigger__action">
+            <span>แตะเลือก</span>
+            <i class="fa-solid fa-chevron-up"></i>
+          </span>
+        </button>
+      </div>
       <div class="work-category-grid reveal" data-anim="up" id="workCategoryGrid"></div>
       <div class="work-gallery-overview reveal" data-anim="up">
         <div class="work-gallery-copy">
@@ -630,6 +650,39 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
     <a class="cta-estimate" href="https://line.me/ti/p/~0917240308" target="_blank" rel="noopener"><i class="fa-solid fa-calculator"></i>ขอประเมิน</a>
     <a class="cta-fb" href="https://www.facebook.com/profile.php?id=61588531555394&rdid=vOcS8JLuhU95w42f#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
   </div>
+  <div class="work-category-sheet" id="workCategorySheet" aria-hidden="true">
+    <div class="work-category-sheet__dialog" role="dialog" aria-modal="true" aria-labelledby="workCategorySheetTitle">
+      <div class="work-category-sheet__handle" aria-hidden="true"></div>
+      <div class="work-category-sheet__head">
+        <div>
+          <p class="work-category-sheet__kicker">เลือกหมวดภาพ</p>
+          <h3 id="workCategorySheetTitle">ผลงานตามประเภทงาน</h3>
+        </div>
+        <button class="work-category-sheet__close" id="closeWorkCategorySheet" type="button" aria-label="ปิดตัวเลือกหมวดภาพ"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="work-category-sheet__list" id="workCategorySheetList"></div>
+    </div>
+  </div>
+  <div class="work-category-status-toast" id="workCategoryStatusToast" aria-hidden="true">
+    <div class="work-category-status-toast__card" role="status" aria-live="polite">
+      <span class="work-category-status-toast__kicker">กำลังแสดงหมวด</span>
+      <strong id="workCategoryStatusTitle">ผลงานทุกประเภท</strong>
+      <small id="workCategoryStatusCount">0 ภาพ</small>
+    </div>
+  </div>
+  <div class="work-category-preview-modal" id="workCategoryPreviewModal" aria-hidden="true">
+    <div class="work-category-preview-dialog" role="dialog" aria-modal="true" aria-labelledby="workCategoryPreviewTitle">
+      <div class="work-category-preview-head">
+        <div class="work-category-preview-copy">
+          <p class="work-category-preview-kicker">กำลังแสดงหมวด</p>
+          <h3 id="workCategoryPreviewTitle">ผลงานทุกประเภท</h3>
+          <small id="workCategoryPreviewCount">0 ภาพ</small>
+        </div>
+        <button class="work-category-preview-close" id="workCategoryPreviewClose" type="button" aria-label="ปิดผลงานหมวดนี้"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="work-category-preview-grid" id="workCategoryPreviewGrid"></div>
+    </div>
+  </div>
   <div class="lightbox-modal" id="workGalleryLightbox" aria-hidden="true">
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="ดูรูปภาพขนาดใหญ่">
       <div class="lightbox-head">
@@ -784,7 +837,7 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       if (!promoEntryModal) return;
       promoEntryModal.classList.toggle('open', open);
       promoEntryModal.setAttribute('aria-hidden', open ? 'false' : 'true');
-      document.body.classList.toggle('modal-open', open);
+      syncOverlayLock();
       if (open) {
         setPromoEntrySlide(promoEntrySlideIndex);
         startPromoEntryCarousel();
@@ -1128,15 +1181,41 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
     }
     const workGallery = document.getElementById('workGallery');
     const workCategoryGrid = document.getElementById('workCategoryGrid');
+    const workGalleryOverview = document.querySelector('.work-gallery-overview');
     const workGalleryKicker = document.getElementById('workGalleryKicker');
     const workGalleryTitle = document.getElementById('workGalleryTitle');
     const workGalleryDescription = document.getElementById('workGalleryDescription');
     const workGalleryCount = document.getElementById('workGalleryCount');
     const toggleWorkGalleryBtn = document.getElementById('toggleWorkGallery');
+    const workCategoryMobileIcon = document.getElementById('workCategoryMobileIcon');
+    const workCategoryMobileLabel = document.getElementById('workCategoryMobileLabel');
+    const workCategoryMobileTitle = document.getElementById('workCategoryMobileTitle');
+    const workCategoryMobileCount = document.getElementById('workCategoryMobileCount');
+    const openWorkCategorySheetBtn = document.getElementById('openWorkCategorySheet');
+    const workCategorySheet = document.getElementById('workCategorySheet');
+    const closeWorkCategorySheetBtn = document.getElementById('closeWorkCategorySheet');
+    const workCategorySheetList = document.getElementById('workCategorySheetList');
+    const workCategoryStatusToast = document.getElementById('workCategoryStatusToast');
+    const workCategoryStatusTitle = document.getElementById('workCategoryStatusTitle');
+    const workCategoryStatusCount = document.getElementById('workCategoryStatusCount');
+    const workCategoryPreviewModal = document.getElementById('workCategoryPreviewModal');
+    const workCategoryPreviewTitle = document.getElementById('workCategoryPreviewTitle');
+    const workCategoryPreviewCount = document.getElementById('workCategoryPreviewCount');
+    const workCategoryPreviewGrid = document.getElementById('workCategoryPreviewGrid');
+    const workCategoryPreviewClose = document.getElementById('workCategoryPreviewClose');
     const workGalleryLightbox = document.getElementById('workGalleryLightbox');
     const workGalleryLightboxImage = document.getElementById('workGalleryLightboxImage');
     const workGalleryLightboxTitle = document.getElementById('workGalleryLightboxTitle');
     const workGalleryLightboxClose = document.getElementById('workGalleryLightboxClose');
+    let workCategoryStatusTimer = null;
+    const syncOverlayLock = () => {
+      const shouldLock =
+        promoEntryModal?.classList.contains('open') ||
+        workCategorySheet?.classList.contains('open') ||
+        workCategoryPreviewModal?.classList.contains('open') ||
+        workGalleryLightbox?.classList.contains('open');
+      document.body.classList.toggle('modal-open', Boolean(shouldLock));
+    };
     const openWorkLightbox = (src, title, altText) => {
       if (!workGalleryLightbox || !workGalleryLightboxImage || !workGalleryLightboxTitle) return;
       workGalleryLightboxImage.src = src;
@@ -1144,14 +1223,14 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       workGalleryLightboxTitle.textContent = title || 'รูปภาพการทำงาน';
       workGalleryLightbox.classList.add('open');
       workGalleryLightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+      syncOverlayLock();
     };
     const closeWorkLightbox = () => {
       if (!workGalleryLightbox || !workGalleryLightboxImage) return;
       workGalleryLightbox.classList.remove('open');
       workGalleryLightbox.setAttribute('aria-hidden', 'true');
       workGalleryLightboxImage.removeAttribute('src');
-      document.body.style.overflow = '';
+      syncOverlayLock();
     };
     if (workGalleryLightbox && workGalleryLightboxClose) {
       workGalleryLightboxClose.addEventListener('click', closeWorkLightbox);
@@ -1169,6 +1248,7 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       let galleryReadyToAnimate = prefersReducedMotion;
       let selectedCategoryId = 'all';
       let isGalleryExpanded = false;
+      const isCompactCategoryView = () => window.innerWidth <= 720;
 
       const range = (start, end) =>
         Array.from({ length: end - start + 1 }, (_, index) => start + index);
@@ -1313,6 +1393,38 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
       );
       const getCurrentCategory = () =>
         categoryById[selectedCategoryId] || workCategories[0];
+      const closeWorkCategoryStatus = () => {
+        if (!workCategoryStatusToast) return;
+        workCategoryStatusToast.classList.remove('open');
+        workCategoryStatusToast.setAttribute('aria-hidden', 'true');
+      };
+      const showWorkCategoryStatus = category => {
+        if (!workCategoryStatusToast || !isCompactCategoryView()) return;
+        if (workCategoryStatusTitle) workCategoryStatusTitle.textContent = category.title;
+        if (workCategoryStatusCount) workCategoryStatusCount.textContent = `${category.items.length} ภาพ`;
+        workCategoryStatusToast.classList.add('open');
+        workCategoryStatusToast.setAttribute('aria-hidden', 'false');
+        if (workCategoryStatusTimer) clearTimeout(workCategoryStatusTimer);
+        workCategoryStatusTimer = window.setTimeout(() => {
+          closeWorkCategoryStatus();
+          workCategoryStatusTimer = null;
+        }, 1700);
+      };
+      const setWorkCategorySheetState = open => {
+        if (!workCategorySheet) return;
+        workCategorySheet.classList.toggle('open', open);
+        workCategorySheet.setAttribute('aria-hidden', open ? 'false' : 'true');
+        if (openWorkCategorySheetBtn) {
+          openWorkCategorySheetBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        syncOverlayLock();
+      };
+      const setWorkCategoryPreviewState = open => {
+        if (!workCategoryPreviewModal) return;
+        workCategoryPreviewModal.classList.toggle('open', open);
+        workCategoryPreviewModal.setAttribute('aria-hidden', open ? 'false' : 'true');
+        syncOverlayLock();
+      };
 
       const animateWorkGalleryItems = () => {
         const visibleCards = Array.from(workGallery.children).filter(
@@ -1352,6 +1464,43 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         `;
         return button;
       };
+      const createCategorySheetOption = category => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'work-category-sheet__option';
+        if (category.id === selectedCategoryId) button.classList.add('active');
+        button.dataset.category = category.id;
+        button.setAttribute('aria-label', `ดูหมวด ${category.title} จำนวน ${category.items.length} ภาพ`);
+        button.setAttribute('aria-pressed', category.id === selectedCategoryId ? 'true' : 'false');
+        button.innerHTML = `
+          <span class="work-category-sheet__thumb">
+            <img src="${category.cover}" alt="${category.title}" loading="lazy" decoding="async">
+          </span>
+          <span class="work-category-sheet__copy">
+            <strong>${category.shortTitle}</strong>
+            <small>${category.items.length} ภาพ</small>
+          </span>
+          <span class="work-category-sheet__meta">
+            <i class="${category.icon}"></i>
+            <span>${category.items.length}</span>
+          </span>
+        `;
+        return button;
+      };
+      const createCategoryPreviewCard = (item, index, category) => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'work-category-preview-card';
+        const titleText = `${category.title} ภาพที่ ${index + 1}`;
+        card.dataset.src = item.src;
+        card.dataset.title = titleText;
+        card.dataset.alt = titleText;
+        card.innerHTML = `
+          <img src="${item.src}" alt="${titleText}" loading="lazy" decoding="async">
+          <span>${category.shortTitle} #${index + 1}</span>
+        `;
+        return card;
+      };
 
       const renderCategoryCards = () => {
         const fragment = document.createDocumentFragment();
@@ -1359,6 +1508,24 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
           fragment.appendChild(createCategoryCard(category));
         });
         workCategoryGrid.replaceChildren(fragment);
+        if (workCategorySheetList) {
+          const sheetFragment = document.createDocumentFragment();
+          workCategories.forEach(category => {
+            sheetFragment.appendChild(createCategorySheetOption(category));
+          });
+          workCategorySheetList.replaceChildren(sheetFragment);
+        }
+      };
+      const updateMobileCategorySummary = category => {
+        if (workCategoryMobileIcon) {
+          workCategoryMobileIcon.innerHTML = `<i class="${category.icon}"></i>`;
+        }
+        if (workCategoryMobileLabel) {
+          workCategoryMobileLabel.textContent =
+            category.id === 'all' ? 'เลือกหมวดภาพ' : 'กำลังแสดงหมวด';
+        }
+        if (workCategoryMobileTitle) workCategoryMobileTitle.textContent = category.shortTitle;
+        if (workCategoryMobileCount) workCategoryMobileCount.textContent = `${category.items.length} ภาพ`;
       };
 
       const updateGalleryOverview = category => {
@@ -1371,6 +1538,41 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         if (workGalleryTitle) workGalleryTitle.textContent = category.title;
         if (workGalleryDescription) workGalleryDescription.textContent = category.description;
         if (workGalleryCount) workGalleryCount.textContent = `${category.items.length} ภาพ`;
+        updateMobileCategorySummary(category);
+      };
+      const renderWorkCategoryPreview = category => {
+        if (!workCategoryPreviewGrid) return;
+        workCategoryPreviewGrid.scrollTop = 0;
+        if (workCategoryPreviewTitle) workCategoryPreviewTitle.textContent = category.title;
+        if (workCategoryPreviewCount) workCategoryPreviewCount.textContent = `${category.items.length} ภาพ`;
+        if (!category.items.length) {
+          workCategoryPreviewGrid.innerHTML = `
+            <div class="gallery-item gallery-placeholder">
+              <div>
+                <i class="fa-regular fa-image"></i>
+                <p>ยังไม่มีรูปในหมวดนี้</p>
+              </div>
+            </div>
+          `;
+          return;
+        }
+        const fragment = document.createDocumentFragment();
+        category.items.forEach((item, index) => {
+          const itemCategory = categoryById[item.categoryId] || category;
+          fragment.appendChild(createCategoryPreviewCard(item, index, itemCategory));
+        });
+        workCategoryPreviewGrid.replaceChildren(fragment);
+      };
+      const openWorkCategoryPreview = categoryId => {
+        if (!categoryById[categoryId]) return;
+        selectedCategoryId = categoryId;
+        isGalleryExpanded = false;
+        renderCategoryCards();
+        renderWorkGallery();
+        const category = getCurrentCategory();
+        renderWorkCategoryPreview(category);
+        closeWorkCategoryStatus();
+        setWorkCategoryPreviewState(true);
       };
 
       const createWorkCard = (item, index, category) => {
@@ -1443,13 +1645,37 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         isGalleryExpanded = false;
         renderCategoryCards();
         renderWorkGallery();
+        if (isCompactCategoryView()) {
+          setWorkCategorySheetState(false);
+          showWorkCategoryStatus(getCurrentCategory());
+          const scrollTarget = workGalleryOverview || workGallery;
+          if (scrollTarget) {
+            window.requestAnimationFrame(() => {
+              scrollTarget.scrollIntoView({
+                behavior: prefersReducedMotion ? 'auto' : 'smooth',
+                block: 'start',
+              });
+            });
+          }
+        }
       };
 
       workCategoryGrid.addEventListener('click', event => {
         const target = event.target.closest('[data-category]');
         if (!target) return;
+        if (isCompactCategoryView()) {
+          openWorkCategoryPreview(target.dataset.category || 'all');
+          return;
+        }
         selectCategory(target.dataset.category || 'all');
       });
+      if (workCategorySheetList) {
+        workCategorySheetList.addEventListener('click', event => {
+          const target = event.target.closest('[data-category]');
+          if (!target) return;
+          selectCategory(target.dataset.category || 'all');
+        });
+      }
 
       workGallery.addEventListener('click', event => {
         const card = event.target.closest('.gallery-item');
@@ -1474,6 +1700,60 @@ h1,h2,h3,.hero-badge{font-family:'Chakra Petch','Prompt',sans-serif}
         isGalleryExpanded = !isGalleryExpanded;
         renderWorkGallery();
       });
+
+      if (openWorkCategorySheetBtn && workCategorySheet) {
+        openWorkCategorySheetBtn.addEventListener('click', () => {
+          setWorkCategorySheetState(true);
+        });
+        workCategorySheet.addEventListener('click', event => {
+          if (event.target === workCategorySheet) setWorkCategorySheetState(false);
+        });
+        if (closeWorkCategorySheetBtn) {
+          closeWorkCategorySheetBtn.addEventListener('click', () => {
+            setWorkCategorySheetState(false);
+          });
+        }
+        window.addEventListener('resize', () => {
+          if (!isCompactCategoryView() && workCategorySheet.classList.contains('open')) {
+            setWorkCategorySheetState(false);
+          }
+          if (!isCompactCategoryView()) {
+            closeWorkCategoryStatus();
+          }
+        });
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && workCategorySheet.classList.contains('open')) {
+            setWorkCategorySheetState(false);
+          }
+        });
+      }
+      if (workCategoryPreviewModal && workCategoryPreviewGrid) {
+        if (workCategoryPreviewClose) {
+          workCategoryPreviewClose.addEventListener('click', () => {
+            setWorkCategoryPreviewState(false);
+          });
+        }
+        workCategoryPreviewModal.addEventListener('click', event => {
+          if (event.target === workCategoryPreviewModal) {
+            setWorkCategoryPreviewState(false);
+          }
+        });
+        workCategoryPreviewGrid.addEventListener('click', event => {
+          const card = event.target.closest('.work-category-preview-card');
+          if (!card) return;
+          openWorkLightbox(card.dataset.src || '', card.dataset.title || '', card.dataset.alt || '');
+        });
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && workCategoryPreviewModal.classList.contains('open')) {
+            setWorkCategoryPreviewState(false);
+          }
+        });
+        window.addEventListener('resize', () => {
+          if (!isCompactCategoryView() && workCategoryPreviewModal.classList.contains('open')) {
+            setWorkCategoryPreviewState(false);
+          }
+        });
+      }
 
       renderCategoryCards();
       renderWorkGallery();
